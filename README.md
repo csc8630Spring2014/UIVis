@@ -16,3 +16,8 @@ Caveats:
   Visualization will REQUIRE abstraction of the data to something that can be actually visualized
   <br>
   IE N-Dimensional data ---> 2D or 3D visualization
+
+<p>
+So, I am going to get input from clusterizer and graphiphier and I may send stuff to fetcher?
+
+this is probably going to be a streaming of graph nodes... so i need to draw those correctly
