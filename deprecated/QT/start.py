@@ -8,7 +8,7 @@ class MyWindow(QtGui.QMainWindow):
 		super(MyWindow, self).__init__()
 		uic.loadUi('UIVis.ui', self)
 		self.show()
-		self.raise_()
+		self.raise_() 
 
 if __name__ == '__main__':
     app = QtGui.QApplication(sys.argv)

@@ -1,0 +1,20 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+/* Selects level 1 headings              */
+h1
+
+/* Selects paragraphs                    */
+p {
+    font-size: 12px;
+    line-height: 14px;
+    color: lime;
+}
+
+/* Selects elements with class "caption" */
+.caption    
+
+/* Selects element with ID "subnav"      */
+#subnav
