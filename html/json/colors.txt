@@ -1,0 +1,16 @@
+virii  - FF0066
+amphib - FFFF00
+bact   - FF9900
+mammal - 33CCFF
+plant  - 33CC33
+ameob  - FFFFCC
+reptile - CC6600
+jellyfish - ffccff
+slug/etc - CCFF66
+fish - 66FFCC
+bird - 9999FF
+arthrop - 999966
+yeast/mold - CCFF33
+roundworm - FFCC99
+
+
