@@ -30,9 +30,10 @@ path.link {
 var margin = {top: 30, right: 20, bottom: 30, left: 20},
 	width = 960 - margin.left - margin.right,
     barHeight = 20,
-    barWidth = 45;
+    barWidth = 45
+    clicked = 0;
 
-var i = 0,
+var i = 0, clicked = 0,
     duration = 400,
     root, colorList;
 
@@ -54,6 +55,7 @@ d3.json("json/colors.json", function(error, data) {
 		data.x0 = 0;
 		data.y0 = 0;
 		update(root = data);
+		window.clicked = clicked;
 	});
 });
 

@@ -19,7 +19,7 @@ d3.custom.chart.flow = function() {
         .margin(margin)
         .padding(padding)
         .nodeWidth(110)
-        .nodeHeight(30)
+        .nodeHeight(36)
         .containerHeight(20);
  
     function chart(selection) {
@@ -93,6 +93,7 @@ d3.custom.chart.flow = function() {
                 svg = container.append("svg")
                     .attr("class", "svg chartSVG")
                     .attr("transform", "translate(0, 0)")
+                    .style("z-index", "0")
                     .style("shape-rendering", "auto") // shapeRendering options; [crispEdges|geometricPrecision|optimizeSpeed|auto]
                     .style("text-rendering", "auto"); // textRendering options;  [auto|optimizeSpeed|optimizeLegibility|geometricPrecision]
                 chartGroup = svg.append("svg:g")
@@ -118,7 +119,8 @@ d3.custom.chart.flow = function() {
                         d.children = d._children;
                         d._children = null;
                         if(d.name.length == 5) {      //fixed
-							showDetail(d);				
+                        	if(!window.clicked) {window.clicked = 0;}
+							showDetail(d);			
                         }
                     }
                     resize(d);
@@ -157,7 +159,7 @@ d3.custom.chart.flow = function() {
                             .attr("class", "label")
                             .attr("dy", 13)
                             .attr("dx", 17)
-                            .text(function(d) { return d.name == "386%" ? "" : d.name; }); //fixed
+                            .text(function(d) { return d.name == "386%" ? 'Lowest Similarity ~25% (these are cluster orphans)' : d.name; }); //fixed
                     } else {
                         d3.select(this).append("svg:text")
                             .attr("class", "label")
@@ -176,6 +178,12 @@ d3.custom.chart.flow = function() {
                         	.attr("dy", 26)
                         	.attr("dx", 5)
                         	.text(function(d) { return d.organism.substring(0, 17);});
+						d3.select(this).append("svg:text")
+                        	.attr("class", "label")
+                        	.style("font-size", "9px")
+                        	.attr("dy", 34)
+                        	.attr("dx", 5)
+                        	.text(function(d) { return d.cathid.substring(0, 17);});
                     }
                 });
  

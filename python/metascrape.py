@@ -2,7 +2,7 @@ import json, urllib2, re, nltk
 from collections import defaultdict
 
 _names = dict()
-_fp = open("../html/test_output.json")
+_fp = open("/Users/michael/Documents/Classes/Advanced Bioinformatics/git/Clusterizer/test_output.json")
 _json = json.load(_fp)
 
 foo0 = "http://www.rcsb.org/pdb/explore/explore.do?structureId="
