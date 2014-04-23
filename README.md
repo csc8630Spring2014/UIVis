@@ -21,6 +21,3 @@ Caveats:
 So, I am going to get input from clusterizer and graphiphier and I may send stuff to fetcher?
 
 this is probably going to be a streaming of graph nodes... so i need to draw those correctly
-
-
-Link to Visualization: http://www.cs.gsu.edu/~mmcdermott2/UIVis-master/html/
