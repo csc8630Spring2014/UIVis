@@ -64,7 +64,7 @@ var arc = d3.svg.arc()
     .innerRadius(function(d) { return Math.max(0, d.y ? y(d.y) : d.y); })
     .outerRadius(function(d) { return Math.max(0, y(d.y + d.dy)); });
 
-d3.json("json/usefull.json", function(error, json) {
+d3.json("json/useful.json", function(error, json) {
   var nodes = partition.nodes(json);
 
   var path = vis.selectAll("path").data(nodes);
